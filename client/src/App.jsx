@@ -11,6 +11,8 @@ import PageNotFound from './Pages/PageNotFound';
 import Profile from './Pages/Profile';
 import Influencer from './Pages/Influencer';
 
+import PrivateComponent from './components/PrivateComponent';
+
 const App = () => {
   return (
    <Router>
@@ -18,11 +20,14 @@ const App = () => {
     <Routes>
     <Route path='*' element={<PageNotFound/>}/>
       <Route path='/' element={<Home/>}/>
-      <Route path='/auth/admin' element={<AdminDashboard/>}/>
-      <Route path='/auth/profile' element={<Profile/>}/>
-      <Route path='/influencer/:id' element={<Influencer/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
+
+      <Route path='/auth' element={<PrivateComponent/>}>
+       <Route path='admin' element={<AdminDashboard/>}/>
+      <Route path='profile' element={<Profile/>}/>
+      <Route path='influencer/:id' element={<Influencer/>}/>
+      </Route>
     </Routes>
     <Footer />
     <ToastContainer/>

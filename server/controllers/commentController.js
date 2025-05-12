@@ -3,7 +3,7 @@ const Comment = require('../models/commentModel')
 
 const getComments = expressAsyncHandler(async(req,res) => {
     
-    const comments = await Comment.find({booking:req.params.bid})
+    const comments = await Comment.find({booking:req.params.bid}).populate('user')
 
     if(!comments){
         res.status(404)

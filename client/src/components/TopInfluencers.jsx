@@ -44,7 +44,7 @@ const InfluencerCard = ({ influencer }) => {
         
       
         
-        <Link to={`/influencer/${influencer._id}`} className="w-full mt-5 py-2.5 bg-orange-500 hover:from-amber-500 hover:to-influencer-orange text-white rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-1 group">
+        <Link to={`auth/influencer/${influencer._id}`} className="w-full mt-5 py-2.5 bg-orange-500 hover:from-amber-500 hover:to-influencer-orange text-white rounded-lg hover:shadow-md transition-all flex items-center justify-center gap-1 group">
           <span>View Profile</span>
           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
         </Link>

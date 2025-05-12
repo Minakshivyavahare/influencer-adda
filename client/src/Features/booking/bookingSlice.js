@@ -60,7 +60,7 @@ const bookingSlice = createSlice({
      .addCase(addBooking.fulfilled, (state,action) => {
         state.bookingsLoading = false,
         state.bookingsSuccess = true,
-        state.bookings = [action.payload, ...state.booking]
+        state.bookings = [action.payload, ...state.bookings]
         state.booking = action.payload,
         state.bookingsError = false
        

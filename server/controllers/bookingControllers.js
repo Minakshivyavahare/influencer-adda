@@ -40,12 +40,12 @@ const addBooking = expressAsyncHandler( async(req,res) =>{
    }
 
    //check if influencer is already booked by user
-   const alreadyBooked = await Booking.findOne({influencer: req.params.id})
+//    const alreadyBooked = await Booking.findOne({influencer: req.params.id})
 
-   if(alreadyBooked){
-    res.status(404)
-    throw new Error("Booking Already Exist")
-   }
+//    if(alreadyBooked){
+//     res.status(404)
+//     throw new Error("Booking Already Exist")
+//    }
 
    //update Influencer
    await Influencer.findByIdAndUpdate(influencer._id,{isActive: false}, {new:true})

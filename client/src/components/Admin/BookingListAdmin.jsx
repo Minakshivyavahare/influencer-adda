@@ -81,7 +81,7 @@ const BookingListAdmin = () => {
                 <select onChange={(e) => updateBookingStatus(booking._id,e.target.value)} value={booking.status}>
                   <option value="pending">Pending</option>
                   <option value="accepted">Accepted</option>
-                  <option value="reject">Reject</option>
+                  <option value="rejected">Rejected</option>
                   <option value="complete">Completed</option>
                 </select>
                </td>
